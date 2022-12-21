@@ -1,0 +1,20 @@
+[
+	{
+		"idModuleStatus" : 1,
+		"moduleStatus" : "Proyectado",
+		"description" : null,
+		"registerCreationDate" : "2022-10-29T05:00:00.000Z"
+	},
+	{
+		"idModuleStatus" : 2,
+		"moduleStatus" : "Desarrollo",
+		"description" : null,
+		"registerCreationDate" : "2022-10-29T05:00:00.000Z"
+	},
+	{
+		"idModuleStatus" : 3,
+		"moduleStatus" : "Funcionamiento ",
+		"description" : null,
+		"registerCreationDate" : "2022-10-29T05:00:00.000Z"
+	}
+]

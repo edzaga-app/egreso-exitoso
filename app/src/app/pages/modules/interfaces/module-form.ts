@@ -1,0 +1,20 @@
+export interface ModuleForm {
+  idModule: number;
+  module: string;
+  description: string;
+  requirementsInclusionDate: string;
+  moduleStartDate: string;
+  moduleTerminationDate: string;
+  operationStartDate: string;
+  moduleRetirementDate: string;
+  gitPath: string;
+  moduleServerPath: string;
+  moduleAudit: string;
+  testStartDate: string;
+  testTerminationDate: string;
+  idType: number;
+  idCompany: string;
+  registerCreationDate: string;
+  idInformationSystem: string;
+  idServer: number;
+};

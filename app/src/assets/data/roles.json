@@ -1,0 +1,14 @@
+[
+	{
+		"idRole" : 1,
+		"role" : "Administrador",
+		"description" : null,
+		"registerCreationDate" : "2022-10-29T05:00:00.000Z"
+	},
+	{
+		"idRole" : 2,
+		"role" : "Usuario",
+		"description" : null,
+		"registerCreationDate" : "2022-10-29T05:00:00.000Z"
+	}
+]

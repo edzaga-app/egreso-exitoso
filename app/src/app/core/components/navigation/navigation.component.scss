@@ -1,0 +1,264 @@
+* {
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    ::-webkit-scrollbar:window-inactive {
+    display: none;
+    }
+    
+    ::-webkit-scrollbar-track-piece {
+    border-radius: 2px;
+    background-color: #369;
+    background-clip: content-box;
+    border-radius: 6px;
+    border: solid 4px transparent;
+    }
+    ::-webkit-scrollbar-track-piece:decrement {
+    background: #369;
+    background-clip: content-box;
+    border: solid 4px transparent;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb  {
+    height: 10px;
+    width: 4px;
+    background-color: #88c8fc;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px -2px rgba(51,0,51,0.5);
+    }
+}
+
+#sidenav.menu-close ::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+#sidenav.menu-close {
+  transition-duration: 350ms;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0,0,10px,-5px;
+  border: none;
+  color: white;
+  width: 70px; 
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .logo-container{
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 180px;
+    background-image: url("/assets/img/textura.svg");
+    background-size: cover;
+    
+  }
+
+  .logo-inventary-utp{
+    width: 60px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+  }
+
+  p{
+    font-size: 0px;
+    color: transparent;
+    
+  }
+
+  a{
+    background-color: transparent;
+    height: 50px;
+    width: 0px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 0px;
+    color: transparent;
+  }
+
+  .button:hover{
+    background-color: #bebebe;
+    color: #bebebe;
+  }
+
+  .button:focus{
+    background-color: #add7fa;
+    color: #add7fa;
+  }
+
+  .button:active{
+     background-color: #88c8fc;
+     color: #88c8fc;
+   }
+
+   .buttons{
+    margin-left: 5px;
+   }
+  
+}
+
+#sidenav.menu-open {
+  transition-duration: 200ms;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0,0,10px,-5px;
+  border: none;
+  color: white;
+  width: 275px; 
+  overflow: hidden;
+  -moz-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.sidenav::-webkit-scrollbar { 
+  display: none;
+}
+
+
+
+// Contenedor todo el proyecto
+.sidenav-container {
+  height: 100%;
+  background-color: #eeee;
+}
+
+// Contenedor sidenav
+#sidenav {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0,0,10px,-5px;
+  border: none;
+  color: white;
+  width: 240px; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+
+ 
+
+  .logo-container{
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 180px;
+    background-image: url("/assets/img/textura.svg");
+    background-size: cover;
+    
+  }
+
+  .logo-inventary-utp{
+    width: 95px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+  }
+
+  p{
+    color: #5bafff;
+    padding-left: 2%;
+    align-items: left;
+    font-size: medium;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .button{
+    background-color: transparent;
+    margin-right: 8px;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    color: #323232;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  
+  .button:hover{
+    background-color: #bebebe;
+    color: #323232;
+  }
+
+  .button:focus{
+    background-color: #add7fa;
+    color: #003d6e;
+  }
+
+  .button:active{
+     background-color: #88c8fc;
+     color: #003d6e;
+   }
+
+  .buttons{
+    margin-left: 8px;
+  }
+
+  
+
+  mat-icon{
+    color: #323232;
+    padding-right: 8px;
+  }
+
+  
+
+  .modules:hover{
+    background-color: #bebebe;
+    color: #323232;
+  }
+
+  .modules:focus{
+    background-color: #add7fa;
+    color: #003d6e;
+  }
+
+  .modules:active{
+    background-color: #88c8fc;
+    color: #003d6e;
+  }
+}
+
+
+
+.main-container{
+  margin: 10px;
+  background-color: #ebebeb;
+}
+
+
+.sidevar-title{
+text-align: center;
+margin-left: 20%;
+margin-top: 5%;
+}
+
+
+.mat-sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+::ng-deep .mat-tooltip {
+  font-size: smaller;
+  padding: 2px;
+  background-color: #5a5858;
+}
+
+.disabled {
+  background: #eee;
+  color: #aaa;
+}

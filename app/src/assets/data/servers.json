@@ -1,0 +1,14 @@
+[
+	{
+		"serverId" : 1,
+		"server" : "HULK",
+		"serverIp" : "10.011.110.2",
+		"osId" : 1
+	},
+	{
+		"serverId" : 2,
+		"server" : "IRON MAN",
+		"serverIp" : "10.100.101.1",
+		"osId" : 2
+	}
+]

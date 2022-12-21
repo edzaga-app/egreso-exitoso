@@ -1,0 +1,41 @@
+<main class="dialog-container">
+  <div class="dialog-header">
+    <h2 mat-dialog-title class="mat-dialog-title">Inserte los datos del trabajador externo</h2>
+    <button mat-icon-button [mat-dialog-close]="null" class="cancel-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-dialog-content class="mat-typography">
+    <form class="form-container" [formGroup]="enterpriseForm" (ngSubmit)="onSubmit()" id="form">
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" formControlName="company">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Direccion</mat-label>
+          <input matInput type="text" formControlName="address">
+        </mat-form-field>
+      </div>
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Nit</mat-label>
+          <input matInput type="text" formControlName="nit">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Telefono</mat-label>
+          <input matInput type="text" formControlName="contactNumber">
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Pagina Web</mat-label>
+        <input matInput type="text" formControlName="webPage">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="actions" align='end'>
+    <button mat-button type="submit" form="form" [mat-dialog-close]="data">
+      <mat-icon>save</mat-icon>Guardar
+    </button>
+  </mat-dialog-actions>
+</main>

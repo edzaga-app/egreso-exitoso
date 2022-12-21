@@ -1,0 +1,63 @@
+<main class="dialog-container">
+  <div class="dialog-header">
+    <h2 mat-dialog-title class="mat-dialog-title">Inserte los datos del modulo</h2>
+    <button mat-icon-button [mat-dialog-close]="null" class="cancel-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-dialog-content class="mat-typography">
+    <form class="form-container" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" id="form">
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" formControlName="module">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Ruta Git</mat-label>
+          <input matInput type="text" formControlName="gitPath">
+        </mat-form-field>
+      </div>
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Ruta Servidor</mat-label>
+          <input matInput type="text" formControlName="moduleServerPath">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Tipo Modulo</mat-label>
+          <input matInput type="text" formControlName="idType">
+        </mat-form-field>
+      </div>
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Sistema Informacion</mat-label>
+          <input matInput type="text" formControlName="idInformationSystem" [matAutocomplete]="autoInformationSystem">
+          <mat-autocomplete autoActiveFirstOption #autoInformationSystem="matAutocomplete">
+            <mat-option *ngFor="let option of informationSystemsOptions" [value]="option.informationSystem">
+              {{option.informationSystem}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Empresa</mat-label>
+          <input matInput type="text" formControlName="idCompany" [matAutocomplete]="autoEnterprise">
+          <mat-autocomplete autoActiveFirstOption #autoEnterprise="matAutocomplete">
+            <mat-option *ngFor="let option of enterprisesOptions" [value]="option.company">
+              {{option.company}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <input matInput type="text" formControlName="description">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="actions" align='end'>
+    <button mat-button type="submit" form="form" [mat-dialog-close]="data">
+      <mat-icon>save</mat-icon>Guardar
+    </button>
+  </mat-dialog-actions>
+</main>

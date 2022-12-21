@@ -1,0 +1,34 @@
+<main class="dialog-container">
+  <div class="dialog-header">
+    <h2 mat-dialog-title class="mat-dialog-title">Inserte los datos del sistema de informacion</h2>
+    <button mat-icon-button [mat-dialog-close]="null" class="cancel-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-dialog-content class="mat-typography">
+    <form class="form-container" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" id="form">
+      <div class="utp-row-2" [ngClass]="{'utp-row-medium': utpMedium}">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="informationSystem">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Siglas</mat-label>
+        <input matInput type="text" formControlName="abbreviation">
+      </mat-form-field>
+    </div>
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <input matInput type="text"  formControlName="description">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="actions" align='end'>
+    <button mat-button
+      type="submit"
+      form="form"
+      [mat-dialog-close]="data">
+      <mat-icon>save</mat-icon>Guardar
+    </button>
+  </mat-dialog-actions>
+</main>
