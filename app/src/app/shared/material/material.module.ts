@@ -13,7 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const materialModules = [
   MatToolbarModule,
@@ -32,16 +32,11 @@ const materialModules = [
   MatPaginatorModule,
   MatDividerModule,
   MatAutocompleteModule,
-  MatTooltipModule
+  MatTooltipModule,
 ];
 
-
 @NgModule({
-  imports: [
-    materialModules
-  ],
-  exports: [
-    materialModules
-  ]
+  imports: [materialModules],
+  exports: [materialModules],
 })
-export class MaterialModule { }
+export class MaterialModule {}

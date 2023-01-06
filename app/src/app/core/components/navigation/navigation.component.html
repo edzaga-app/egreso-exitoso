@@ -1,52 +1,62 @@
 <mat-sidenav-container class="sidenav-container" fullscreen>
-  
   <mat-sidenav
     id="sidenav"
-    opened 
-    #sidenav 
+    opened
+    #sidenav
     class="sidenav"
     [class.menu-open]="isMenuOpen"
     [class.menu-close]="!isMenuOpen"
-    mode="side">
-      <section class="logo-container">
-        <img  class="logo-inventary-utp" [src]="'/assets/img/logoutp.svg'">
-      </section>
-
-    <section class="buttons">
-      <br>
-      <p>Alamacenamiento</p>
-      <a  href="#" mat-button class="button " matTooltip="servidores" matTooltipPosition="right"><mat-icon>backup</mat-icon>Servidores</a>
-      <a mat-button class="button"  matTooltip="Sistemas de Información" matTooltipPosition="right" routerLink="information-systems"><mat-icon>assignment</mat-icon>Sistemas de Información</a>
-      <a href="#" mat-button class="button"  matTooltip="Sistemas operativos" matTooltipPosition="right"><mat-icon>android</mat-icon>Sistemas Operativos</a>
-      <a href="#" mat-button class="button"  matTooltip="Modulos" matTooltipPosition="right" routerLink=""><mat-icon>extension</mat-icon>Modulos</a><br>
-
-      <p href="#">Involucrados</p>
-      <a mat-button class="button" matTooltip="Empresas" matTooltipPosition="right" routerLink="enterprises"><mat-icon>store</mat-icon>Empresas</a>
-      <a mat-button class="button" matTooltip="Trabajadores externos" matTooltipPosition="right" routerLink="external-workers"><mat-icon>assignment_ind</mat-icon>Trabajadores Externos</a>
-      <a href="#" mat-button class="button" matTooltip="Trabajadores internos" matTooltipPosition="right"><mat-icon>account_circle</mat-icon>Trabajadores Internos</a><br>
-
-      <p href="#">Herramientas</p>
-      <a href="#" mat-button class="button" matTooltip="Frameworks" matTooltipPosition="right"><mat-icon>aspect_ratio</mat-icon>Frameworks</a>
-      <a href="#" mat-button class="button" matTooltip="Picos de Trabajo" matTooltipPosition="right"><mat-icon>trending_up</mat-icon>Picos de Trabajo</a>
-      <a href="#" mat-button class="button" matTooltip="Plataformas" matTooltipPosition="right"><mat-icon>dashboard</mat-icon>Plataformas</a>
-      <a href="#" mat-button class="button" matTooltip="Lenguajes" matTooltipPosition="right"><mat-icon>code</mat-icon>Lenguajes</a>
-      <a href="#" mat-button class="button" matTooltip="Soportes" matTooltipPosition="right"><mat-icon>build</mat-icon>Soportes</a>
+    mode="side"
+  >
+    <section class="logo-container">
+      <img class="logo-inventary-utp" [src]="'/assets/img/logoutp.svg'" />
     </section>
 
+    <section class="buttons">
+      <br />
+      <p>Modulos</p>
+      <a
+        href="#"
+        mat-button
+        class="button"
+        matTooltip="Estudiantes"
+        matTooltipPosition="right"
+        routerLink="/students"
+        ><mat-icon>co_present</mat-icon>Estudiantes</a
+      >
+      <a
+        mat-button
+        class="button"
+        matTooltip="Graficas"
+        matTooltipPosition="right"
+        routerLink="/charts"
+        ><mat-icon>stacked_bar_chart</mat-icon>Graficas</a
+      >
+      <a
+        href="#"
+        mat-button
+        class="button"
+        matTooltip="Sistemas operativos"
+        matTooltipPosition="right"
+        ><mat-icon>android</mat-icon>Sistemas Operativos</a
+      >
+      <a
+        href="#"
+        mat-button
+        class="button"
+        matTooltip="Modulos"
+        matTooltipPosition="right"
+        routerLink=""
+        ><mat-icon>extension</mat-icon>Modulos</a
+      ><br />
+    </section>
   </mat-sidenav>
 
-    <mat-sidenav-content  [ngStyle]="{ 'margin-left.px': contentMargin }">
-        <utp-toolbar 
-        (emit)="onToolbarMenuToggle()"
-        ></utp-toolbar>
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
+    <utp-toolbar (emit)="onToolbarMenuToggle()"></utp-toolbar>
 
-        <main class="main-container">
-          <utp-layout></utp-layout>
-          <!--<utp-information-systems></utp-information-systems> -->
-           <!--<utp-enterprise-view></utp-enterprise-view> -->
-          <!--<utp-external-workers-view></utp-external-workers-view>-->
-          <!--<utp-external-workers-form></utp-external-workers-form>-->
-        </main>
-    </mat-sidenav-content>
-
+    <main class="main-container">
+      <utp-layout></utp-layout>
+    </main>
+  </mat-sidenav-content>
 </mat-sidenav-container>

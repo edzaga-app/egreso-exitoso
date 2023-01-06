@@ -4,33 +4,21 @@ import { NavigationComponent } from './navigation.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LogoModule } from '../logo/logo.module';
-import { EnterpriseModule } from 'src/app/pages/enterprise/enterprise.module';
-import { ExternalWorkersModule } from 'src/app/pages/external-workers/external-workers.module';
 import { LayoutModule } from '../layout/layout.module';
 import { LayoutRoutingModule } from '../layout/layout-routing.module';
-import { InformationSystemsModule } from 'src/app/pages/information-systems/information-systems.module';
-import { TestingModule } from 'src/app/pages/testing/testing.module';
-
-
+import { StudentsModule } from '../../../pages/students/students.module';
+import { ChartsModule } from '../../../pages/charts/charts.module';
 
 @NgModule({
-  declarations: [
-    NavigationComponent,
-    ToolbarComponent
-  ],
+  declarations: [NavigationComponent, ToolbarComponent],
   imports: [
     CommonModule,
     MaterialModule,
     LogoModule,
-    ExternalWorkersModule,
-    EnterpriseModule,
-    InformationSystemsModule,
-    TestingModule,
+    ChartsModule,
     LayoutModule,
     LayoutRoutingModule,
   ],
-  exports: [
-    NavigationComponent,
-  ],
+  exports: [NavigationComponent],
 })
-export class NavigationModule { }
+export class NavigationModule {}

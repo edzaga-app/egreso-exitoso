@@ -1,0 +1,46 @@
+<section class="container forms">
+  <div class="form login shadow">
+    <div class="form-content">
+      <header>
+        <img src="/assets/img/logoutp2.svg" alt="" width="95" />
+      </header>
+      <form
+        (keyup.enter)="login(user, password)"
+        (ngSubmit)="login(user, password)"
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <input
+            matInput
+            placeholder="Ingrese su correo utp"
+            name="user"
+            [(ngModel)]="user"
+            type="email"
+            autocomplete="username email"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input
+            matInput
+            placeholder="Ingrese su contraseña"
+            name="password"
+            [(ngModel)]="password"
+            type="password"
+            autocomplete="current-password"
+          />
+        </mat-form-field>
+
+        <button mat-raised-button class="login-field" type="submit">
+          Ingresar
+        </button>
+      </form>
+
+      <div class="separate"></div>
+
+      <div class="form-link2"></div>
+    </div>
+  </div>
+</section>
